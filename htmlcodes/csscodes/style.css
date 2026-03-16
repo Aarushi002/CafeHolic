@@ -143,13 +143,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-dark);
 }
+/* Nav right group: theme toggle + social icons */
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 /* Theme toggle button */
 .theme-toggle {
   background: none;
   border: none;
   cursor: pointer;
   padding: 6px 10px;
-  margin-left: 8px;
+  margin-left: 0;
   font-size: 1.2rem;
   color: var(--nav-link);
   transition: color 0.2s ease;
@@ -188,9 +194,10 @@ nav .navibar{
 }
 nav .navibar .logo a{
   text-decoration: none;
-  font-weight: 500;
-  font-size: 35px;
+  font-weight: 600;
+  font-size: clamp(32px, 4.5vw, 48px);
   color: #ffffff;
+  letter-spacing: 0.02em;
 }
 nav.sticky .navibar .logo a{
   color: #ffffff;
@@ -201,7 +208,7 @@ nav .navibar .menu{
 }
 nav .navibar .menu li{
   list-style: none;
-  margin: 0 20px;
+  margin: 0 28px;
 }
 .navibar .menu a{
   text-decoration: none;
@@ -220,7 +227,8 @@ nav.sticky .menu a{
 nav.sticky .menu a:hover{
   color: #de9e48;
 }
-.navibar .media-icons a{
+.navibar .media-icons a,
+.nav-right-group .media-icons a{
   color: var(--nav-link);
   font-size: 18px;
   margin: 0 6px;
@@ -269,30 +277,32 @@ nav.sticky .menu-btn{
   min-height: 70vh;
 }
 
-/* Hero three columns: left = tagline (typing), center = button, right = image + title */
-.home .home-content.hero-three-cols{
+/* Hero two columns: left = tagline (typing) + Order Now button, right = image + title */
+.home .home-content.hero-two-cols{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
   min-height: 70vh;
   padding: 1rem 0 2rem;
 }
 .home .hero-left-col{
-  flex: 0 1 38%;
+  flex: 0 1 42%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
 }
 .home .hero-tagline{
   font-family: Calibri, 'Segoe UI', sans-serif;
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
   font-weight: 700;
   color: var(--text-secondary);
   margin: 0;
-  line-height: 1.4;
-  min-height: 2.5em;
+  line-height: 1.35;
+  min-height: 1.2em;
   max-width: 100%;
 }
 .home .typing-cursor{
@@ -303,21 +313,15 @@ nav.sticky .menu-btn{
 @keyframes blink {
   50% { opacity: 0; }
 }
-.home .hero-center-col{
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .home .hero-cta{
   margin: 0;
 }
 .home .hero-cta button{
   outline: none;
-  padding: 12px 32px;
+  padding: 14px 36px;
   border-radius: 50px;
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   background: var(--accent);
   color: #fff;
   cursor: pointer;
@@ -336,27 +340,27 @@ nav.sticky .menu-btn{
   color: var(--accent-dark);
 }
 .home .hero-right-col{
-  flex: 0 1 38%;
+  flex: 0 1 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 .home .hero-right-col .hero-image-wrap{
   width: 100%;
-  max-width: 320px;
+  max-width: 420px;
   display: flex;
   justify-content: center;
 }
 .home .hero-right-col .hero-image-wrap img{
   max-width: 100%;
-  max-height: 280px;
+  max-height: 380px;
   object-fit: contain;
 }
 .home .hero-dish-title{
   font-family: 'Ephesis', cursive;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 600;
   color: var(--text-secondary);
   margin: 0;
@@ -756,20 +760,24 @@ footer .text span a:hover{
   }
 }
 @media (max-width: 900px) {
-  .home .home-content.hero-three-cols{
+  .home .home-content.hero-two-cols{
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     text-align: center;
   }
   .home .hero-left-col{
     order: 1;
-    justify-content: center;
-  }
-  .home .hero-center-col{
-    order: 2;
+    align-items: center;
+    gap: 1.25rem;
   }
   .home .hero-right-col{
-    order: 3;
+    order: 2;
+  }
+  .home .hero-right-col .hero-image-wrap{
+    max-width: 340px;
+  }
+  .home .hero-right-col .hero-image-wrap img{
+    max-height: 300px;
   }
   .home .hero-oval{
     width: 180px;
