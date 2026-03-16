@@ -393,12 +393,16 @@ nav.sticky .menu-btn{
 .home .hero-carousel-slide .hero-image-wrap{
   width: 100%;
   max-width: 100%;
+  min-height: 280px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .home .hero-carousel-slide .hero-image-wrap img{
   max-width: 100%;
   max-height: 340px;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
 .home .hero-carousel-slide .hero-dish-title{

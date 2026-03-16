@@ -6,6 +6,16 @@
 })();
 
 // Hero carousel: dishes to cycle through (fade transition, no horizontal slide)
+// Resolve image path so hero carousel works when page is at /htmlcodes/index.html or at /
+function resolveHeroImagePath(relativePath) {
+  var path = typeof window !== "undefined" && window.location && window.location.pathname;
+  if (!path) return relativePath;
+  var lastSlash = path.lastIndexOf("/");
+  var base = lastSlash >= 0 ? path.substring(0, lastSlash + 1) : "";
+  // If page is at root (/ or /index.html), photos are likely under htmlcodes/photos/
+  if (base === "/" || base === "") return "htmlcodes/" + relativePath;
+  return base + relativePath;
+}
 var heroDishes = [
   { src: "photos/cholebhature.png", name: "Chole Bhature" },
   { src: "photos/Pav%20Bhaji.png", name: "Pav Bhaji" },
@@ -49,8 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
       var slide = document.createElement("div");
       slide.className = "hero-carousel-slide" + (index === 0 ? " active" : "");
       slide.setAttribute("aria-hidden", index !== 0);
+      var imgSrc = resolveHeroImagePath(dish.src);
       slide.innerHTML =
-        "<div class=\"hero-image-wrap\"><img src=\"" + dish.src + "\" alt=\"" + (dish.name || "Dish") + "\"></div>" +
+        "<div class=\"hero-image-wrap\"><img src=\"" + imgSrc.replace(/"/g, "&quot;") + "\" alt=\"" + (dish.name || "Dish").replace(/"/g, "&quot;") + "\"></div>" +
         "<h2 class=\"hero-dish-title\">" + (dish.name || "") + "</h2>";
       innerEl.appendChild(slide);
     });
