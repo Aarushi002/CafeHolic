@@ -5,9 +5,9 @@
   else document.body.removeAttribute("data-theme");
 })();
 
-// Carousel image fallback: show placeholder when photo is missing
+// Carousel image fallback: use inline placeholder so no extra network request (avoids loading hang)
 document.addEventListener("DOMContentLoaded", function () {
-  var placeholder = "photos/placeholder.svg";
+  var placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect fill='%23f5f5f5' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif'%3ENo image%3C/text%3E%3C/svg%3E";
   document.querySelectorAll(".testimonial-image, .carousel img[src*='photos/']").forEach(function (img) {
     img.addEventListener("error", function () {
       this.onerror = null;
@@ -36,61 +36,69 @@ document.addEventListener("DOMContentLoaded", function () {
         }, waitAfterTyping);
       }
     }
-    setTimeout(type, waitAfterTyping); // 10 second wait before first typing run
+    type(); // start typing immediately
   }
 });
 
-document.getElementById("themeToggle").addEventListener("click", function () {
-  var isDark = document.body.getAttribute("data-theme") === "dark";
-  if (isDark) {
-    document.body.removeAttribute("data-theme");
-    localStorage.setItem("cafeholic-theme", "light");
-  } else {
-    document.body.setAttribute("data-theme", "dark");
-    localStorage.setItem("cafeholic-theme", "dark");
-  }
-});
+var themeToggle = document.getElementById("themeToggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", function () {
+    var isDark = document.body.getAttribute("data-theme") === "dark";
+    if (isDark) {
+      document.body.removeAttribute("data-theme");
+      localStorage.setItem("cafeholic-theme", "light");
+    } else {
+      document.body.setAttribute("data-theme", "dark");
+      localStorage.setItem("cafeholic-theme", "dark");
+    }
+  });
+}
 
 // Sticky Navigation Menu JS Code
-let nav = document.querySelector("nav");
-let scrollBtn = document.querySelector(".scroll-button a");
-let val;
-window.onscroll = function() {
-  if(document.documentElement.scrollTop > 20){
-    nav.classList.add("sticky");
-    if (scrollBtn) scrollBtn.style.display = "block";
-  }else{
-    nav.classList.remove("sticky");
-    if (scrollBtn) scrollBtn.style.display = "none";
-  }
+var nav = document.querySelector("nav");
+var scrollBtn = document.querySelector(".scroll-button a");
+if (nav) {
+  window.onscroll = function () {
+    if (document.documentElement.scrollTop > 20) {
+      nav.classList.add("sticky");
+      if (scrollBtn) scrollBtn.style.display = "block";
+    } else {
+      nav.classList.remove("sticky");
+      if (scrollBtn) scrollBtn.style.display = "none";
+    }
+  };
 }
 
-// Side NavIgation Menu JS Code
-let body = document.querySelector("body");
-let navBar = document.querySelector(".navibar");
-let menuBtn = document.querySelector(".menu-btn");
-let cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = function(){
-  navBar.classList.add("active");
-  menuBtn.style.opacity = "0";
-  menuBtn.style.pointerEvents = "none";
-  body.style.overflow = "hidden";
-  if (scrollBtn) scrollBtn.style.pointerEvents = "none";
-}
-cancelBtn.onclick = function(){
-  navBar.classList.remove("active");
-  menuBtn.style.opacity = "1";
-  menuBtn.style.pointerEvents = "auto";
-  body.style.overflow = "auto";
-  if (scrollBtn) scrollBtn.style.pointerEvents = "auto";
-}
-
-// Side Navigation Bar Close While We Click On Navigation Links
-let navLinks = document.querySelectorAll(".menu li a");
-for (var i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click" , function() {
+// Side Navigation Menu JS Code
+var body = document.querySelector("body");
+var navBar = document.querySelector(".navibar");
+var menuBtn = document.querySelector(".menu-btn");
+var cancelBtn = document.querySelector(".cancel-btn");
+if (menuBtn && cancelBtn && navBar) {
+  menuBtn.onclick = function () {
+    navBar.classList.add("active");
+    menuBtn.style.opacity = "0";
+    menuBtn.style.pointerEvents = "none";
+    if (body) body.style.overflow = "hidden";
+    if (scrollBtn) scrollBtn.style.pointerEvents = "none";
+  };
+  cancelBtn.onclick = function () {
     navBar.classList.remove("active");
     menuBtn.style.opacity = "1";
     menuBtn.style.pointerEvents = "auto";
+    if (body) body.style.overflow = "auto";
+    if (scrollBtn) scrollBtn.style.pointerEvents = "auto";
+  };
+}
+
+// Side Navigation Bar Close When Clicking Nav Links
+var navLinks = document.querySelectorAll(".menu li a");
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
+    if (navBar) navBar.classList.remove("active");
+    if (menuBtn) {
+      menuBtn.style.opacity = "1";
+      menuBtn.style.pointerEvents = "auto";
+    }
   });
 }

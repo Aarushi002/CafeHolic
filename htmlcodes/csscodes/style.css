@@ -280,19 +280,20 @@ nav.sticky .menu-btn{
   padding: 1rem 0 2rem;
 }
 .home .hero-left-col{
-  flex: 0 1 35%;
+  flex: 0 1 38%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 .home .hero-tagline{
-  font-family: 'Caveat', cursive;
-  font-size: clamp(1.25rem, 2.8vw, 1.6rem);
-  font-weight: 500;
+  font-family: Calibri, 'Segoe UI', sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
   color: var(--text-secondary);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
   min-height: 2.5em;
+  max-width: 100%;
 }
 .home .typing-cursor{
   display: inline-block;
