@@ -5,20 +5,10 @@
   else document.body.removeAttribute("data-theme");
 })();
 
-// Inline SVG placeholder (no extra request, always works)
-var placeholderSvg = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect fill="#f0ebe3" width="400" height="400"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9a8b7a" font-family="sans-serif" font-size="18">Image</text></svg>');
-
+// Carousel image fallback: show placeholder when photo is missing
 document.addEventListener("DOMContentLoaded", function () {
   var placeholder = "photos/placeholder.svg";
-  // Hero images: use inline fallback so they never show broken icon
-  document.querySelectorAll(".img-chole img, .img-pav img").forEach(function (img) {
-    img.addEventListener("error", function () {
-      this.onerror = null;
-      this.src = placeholderSvg;
-    });
-  });
-  // Carousel images
-  document.querySelectorAll(".testimonial-image, .carousel img[src*='photos/'], .carousel img[src*='/photos/']").forEach(function (img) {
+  document.querySelectorAll(".testimonial-image, .carousel img[src*='photos/']").forEach(function (img) {
     img.addEventListener("error", function () {
       this.onerror = null;
       this.src = placeholder;
