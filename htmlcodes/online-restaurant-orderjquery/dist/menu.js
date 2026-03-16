@@ -38,24 +38,56 @@ $(document).ready(function() {
 	// Allow nav/logo/external links to navigate; prevent default for in-page action links (cart, dialogs)
 	$("a").click(function (event) {
 		var href = $(this).attr("href") || "";
-		if (href.indexOf("index.html") >= 0 || href.indexOf("http") === 0) return;
+		if (href.indexOf("index.html") >= 0 || href.indexOf("login.html") >= 0 || href.indexOf("http") === 0) return;
 		event.preventDefault();
 	});
 
 	var numOfOrders = 0;
 	$(".num").text(numOfOrders);
 
-	// Wallet: default ₹1000 for all students, persist in localStorage
-	var WALLET_KEY = "cafeholic-wallet";
+	var API_BASE = window.CAFEHOLIC_API_BASE || "http://localhost:3001";
+	var AUTH_KEY = "cafeholic-auth";
+	function getStoredAuth() {
+		try { return JSON.parse(localStorage.getItem(AUTH_KEY) || "null"); } catch (e) { return null; }
+	}
 	function getWallet() {
-		var w = localStorage.getItem(WALLET_KEY);
-		return w !== null ? parseFloat(w) : 1000;
+		var auth = getStoredAuth();
+		if (auth && auth.user && typeof auth.user.walletBalance === "number") return auth.user.walletBalance;
+		return 0;
 	}
 	function setWallet(val) {
-		localStorage.setItem(WALLET_KEY, String(val));
 		$("#walletBalance").text(Math.round(val));
+		var auth = getStoredAuth();
+		if (auth && auth.user) {
+			auth.user.walletBalance = val;
+			localStorage.setItem(AUTH_KEY, JSON.stringify(auth));
+		}
 	}
-	setWallet(getWallet());
+	function updateNavAndCartWallet() {
+		var auth = getStoredAuth();
+		if (auth && auth.token) {
+			$("#navLogin").hide();
+			$("#navWallet").css("display", "inline-flex");
+			$("#navWalletBalance").text(Math.round(auth.user.walletBalance || 0));
+			$("#walletBalance").text(Math.round(auth.user.walletBalance || 0));
+			$.ajax({
+				url: API_BASE + "/api/wallet",
+				headers: { "Authorization": "Bearer " + auth.token },
+				success: function (data) {
+					var bal = data.balance || 0;
+					$("#walletBalance").text(Math.round(bal));
+					$("#navWalletBalance").text(Math.round(bal));
+					if (auth.user) auth.user.walletBalance = bal;
+					localStorage.setItem(AUTH_KEY, JSON.stringify(auth));
+				}
+			});
+		} else {
+			$("#navWallet").hide();
+			$("#navLogin").css("display", "inline-block");
+			$("#walletBalance").text("—");
+		}
+	}
+	updateNavAndCartWallet();
 
 	// Image fallback: show placeholder when menu photo is missing
 	var placeholderMenu = "../../photos/placeholder.svg";
@@ -222,8 +254,16 @@ $(document).ready(function() {
 			return;
 		}
 
+		var auth = getStoredAuth();
+		if (!auth || !auth.token) {
+			$("#buyerInfo").append('<p>Please <a href="../../login.html">login</a> to place an order.</p>');
+			localStorage.setItem("cafeholic-return-url", window.location.href);
+			return;
+		}
+
 		var totalOrderPrice = parseFloat($("#dialogOrderTotal").text()) || 0;
-		var payViaWallet = $("input[name=paymentMethod]:checked").val() === "wallet";
+		var paymentMethod = $("input[name=paymentMethod]:checked").val() || "cash";
+		var payViaWallet = paymentMethod === "wallet";
 
 		if (payViaWallet) {
 			var balance = getWallet();
@@ -231,29 +271,42 @@ $(document).ready(function() {
 				$("#buyerInfo").append('<p>Insufficient wallet balance. Need ₹' + totalOrderPrice + ', you have ₹' + Math.round(balance) + '.</p>');
 				return;
 			}
-			setWallet(balance - totalOrderPrice);
 		}
 
-		$("#finishOrderDialog").dialog("close");
+		var items = [];
+		$(".orderName").children("span").each(function () { items.push($(this).text()); });
 
-		// Clear the cart after order is placed
-		$("#listOfOrders").empty();
-		$(".cart > h3 > span").text("0 ₹");
-		$(".num").text("0");
-		$("#cartToggle").prop("checked", false);
-
-		$("#buyerName").val("");
-		$("#buyerNumber").val("");
-		$("#buyerTable").val("");
-
-		$("#thanksMessage").dialog({
-			hide: "blind",
-			show: "blind",
-			width: "400px"
+		$.ajax({
+			url: API_BASE + "/api/orders",
+			method: "POST",
+			headers: { "Content-Type": "application/json", "Authorization": "Bearer " + auth.token },
+			data: JSON.stringify({
+				items: items,
+				total: totalOrderPrice,
+				paymentMethod: paymentMethod,
+				buyerName: name,
+				buyerPhone: number,
+				buyerTable: table
+			}),
+			success: function (data) {
+				if (data.walletBalance !== undefined) setWallet(data.walletBalance);
+				updateNavAndCartWallet();
+				$("#finishOrderDialog").dialog("close");
+				$("#listOfOrders").empty();
+				$(".cart > h3 > span").text("0 ₹");
+				$(".num").text("0");
+				$("#cartToggle").prop("checked", false);
+				$("#buyerName").val("");
+				$("#buyerNumber").val("");
+				$("#buyerTable").val("");
+				$("#thanksMessage").dialog({ hide: "blind", show: "blind", width: "400px" });
+				setTimeout(function () { $("#thanksMessage").dialog("close"); }, 3000);
+			},
+			error: function (xhr) {
+				var msg = (xhr.responseJSON && xhr.responseJSON.error) || "Order failed. Try again.";
+				$("#buyerInfo").append('<p>' + msg + '</p>');
+			}
 		});
-		setTimeout(function(){
-			$("#thanksMessage").dialog("close");
-		}, 3000);
 	});
 
 })

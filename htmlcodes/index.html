@@ -35,6 +35,8 @@
         </div>
       </ul>
       <div class="nav-right-group">
+        <span id="navWallet" class="nav-wallet" style="display: none;" title="Your wallet balance">₹<span id="navWalletBalance">0</span></span>
+        <a href="login.html" id="navLogin" class="nav-login" style="display: none;">Login</a>
         <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
           <i class="fas fa-moon theme-icon-dark"></i>
           <i class="fas fa-sun theme-icon-light"></i>
@@ -72,6 +74,11 @@
         </div>
       </div>
     </article>
+    <div class="hero-ticker-wrap" aria-label="Available dishes">
+      <div class="hero-ticker-track">
+        <span class="hero-ticker-content" id="heroTickerContent"></span>
+      </div>
+    </div>
     <div id="neumorph-box">
       <div class="inner"><button class="Btn"><i class="fas fa-qrcode iconss"></i>
           <p>1. Scan the QR Code</p>
@@ -86,20 +93,21 @@
 
   </section>
 
-  <!-- Pav Bhaji Section -->
-  <article class="home" id="home-pav">
-    <div class="home-content">
-      <div class="hero-left">
-        <div class="text">
-          <div class="text-three">Pav</div>
-          <div class="text-four">Bhaji</div>
-        </div>
+  <!-- Featured dishes section: fade carousel (same effect as hero) -->
+  <article class="home home-pav-section" id="home-pav">
+    <div class="home-content pav-two-cols">
+      <div class="pav-left-col">
+        <h2 class="pav-section-title" id="pavSectionTitle">Pav Bhaji</h2>
         <div class="button about-button">
-          <button><a href="online-restaurant-orderjquery/dist/menu.html"> Order Now</a></button>
+          <button><a href="online-restaurant-orderjquery/dist/menu.html">Order Now</a></button>
         </div>
       </div>
-      <div class="img-pav">
-        <img src="photos/Pav%20Bhaji.png" alt="Pav Bhaji">
+      <div class="pav-right-col">
+        <div class="pav-carousel" id="pavCarousel" aria-label="Featured dishes">
+          <div class="pav-carousel-inner">
+            <!-- Slides injected by script.js -->
+          </div>
+        </div>
       </div>
     </div>
   </article>
@@ -115,7 +123,7 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-lg-4">
-              <img class="testimonial-image" src="photos/chilli-potato.png" alt="food">
+              <img class="testimonial-image" src="photos/Honeychillypotato.png" alt="food">
               <div class="feature-box">
                 <h3>CHILLY POTATOES</h3>
                 <p>Sweet,chilly,tangy. Flavours like never before!</p>
@@ -144,7 +152,7 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-lg-4">
-              <img class="testimonial-image" src="photos/Pav%20Bhaji.png" alt="food">
+              <img class="testimonial-image" src="photos/pav-bhaji.png" alt="food">
               <div class="feature-box">
                 <h3>PAV BHAJI</h3>
                 <p>Buttery Pav with extra buttery Bhaji</p>

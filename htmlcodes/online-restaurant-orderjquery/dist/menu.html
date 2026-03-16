@@ -31,6 +31,8 @@
           <i class="fas fa-times"></i>
         </div>
       </ul>
+      <span id="navWallet" class="nav-wallet" style="display: none;" title="Your wallet balance">₹<span id="navWalletBalance">0</span></span>
+      <a href="../../login.html" id="navLogin" class="nav-login" style="display: none;">Login</a>
       <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
         <i class="fas fa-moon theme-icon-dark"></i>
         <i class="fas fa-sun theme-icon-light"></i>
@@ -76,11 +78,10 @@
             <h4 class="totalDialog" id="totalDialog1">Total: ₹<span class="totalAmount">45</span></h4>
           </div>
         </div>
-
         <!-- Recipe 2 -->
         <div class="recipe">
           <p class="name">Pav Bhaji</p>
-          <img src="../../photos/Pav%20Bhaji.png" alt="Pav Bhaji">
+          <img src="../../photos/pav-bhaji.png" alt="Pav Bhaji">
           <a class="btnStyle3 btnStyle addToCart" id="addToCartPavBhaji">Add to Cart</a>
           <p class="price">Half ₹40 | Full ₹75</p>
           <div id="checkOrderPavBhaji" title="PavBhaji" data-half="40" data-full="75" data-recipe-num="2"><div class="portion-choice"><label><input type="radio" name="portionPavBhaji" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionPavBhaji" value="75"> Full ₹75</label></div>
@@ -92,6 +93,384 @@
             <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
             <a class="btnStyle listOver">Done</a>
             <h4 class="totalDialog" id="totalDialog2">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 8 -->
+        <div class="recipe">
+          <p class="name">Chhole Chawal</p>
+          <img src="../../photos/cholerice.png" alt="Chhole Chawal">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartChholeChawal">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderChholeChawal" title="ChholeChawal" data-half="35" data-full="65" data-recipe-num="8"><div class="portion-choice"><label><input type="radio" name="portionChholeChawal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionChholeChawal" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe8">
+              <li><input type="checkbox" checked>Pickle</li>
+              <li><input type="checkbox" checked>Onions</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog8">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 9 -->
+        <div class="recipe">
+          <p class="name">Rajma Chawal</p>
+          <img src="../../photos/delicious-rajma-masala-with-rice-hearty-indian-dish_84443.png" alt="Rajma Chawal">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartRajmaChawal">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderRajmaChawal" title="RajmaChawal" data-half="35" data-full="65" data-recipe-num="9"><div class="portion-choice"><label><input type="radio" name="portionRajmaChawal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionRajmaChawal" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe9">
+              <li><input type="checkbox" checked>Pickle</li>
+              <li><input type="checkbox" checked>Onions</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog9">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 15 -->
+        <div class="recipe">
+          <p class="name">Veg Biryani</p>
+          <img src="../../photos/vegbiryani.png" alt="Veg Biryani">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartVegBiryani">Add to Cart</a>
+          <p class="price">Half ₹50 | Full ₹95</p>
+          <div id="checkOrderVegBiryani" title="VegBiryani" data-half="50" data-full="95" data-recipe-num="15"><div class="portion-choice"><label><input type="radio" name="portionVegBiryani" value="50" checked> Half ₹50</label> <label><input type="radio" name="portionVegBiryani" value="95"> Full ₹95</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe15">
+              <li><input type="checkbox" checked>Raita</li>
+              <li><input type="checkbox" checked>Salad</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog15">Total: ₹<span class="totalAmount">50</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 16 -->
+        <div class="recipe">
+          <p class="name">Paneer Tikka</p>
+          <img src="../../photos/paneertikka.png" alt="Paneer Tikka">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartPaneerTikka">Add to Cart</a>
+          <p class="price">Half ₹45 | Full ₹85</p>
+          <div id="checkOrderPaneerTikka" title="PaneerTikka" data-half="45" data-full="85" data-recipe-num="16"><div class="portion-choice"><label><input type="radio" name="portionPaneerTikka" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionPaneerTikka" value="85"> Full ₹85</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe16">
+              <li><input type="checkbox" checked>Mint Chutney</li>
+              <li><input type="checkbox" checked>Onion</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog16">Total: ₹<span class="totalAmount">45</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 18 -->
+        <div class="recipe">
+          <p class="name">Aloo Paratha</p>
+          <img src="../../photos/alooparatha.jpeg.png" alt="Aloo Paratha">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartAlooParatha">Add to Cart</a>
+          <p class="price">Half ₹30 | Full ₹55</p>
+          <div id="checkOrderAlooParatha" title="AlooParatha" data-half="30" data-full="55" data-recipe-num="18"><div class="portion-choice"><label><input type="radio" name="portionAlooParatha" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionAlooParatha" value="55"> Full ₹55</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe18">
+              <li><input type="checkbox" checked>Curd</li>
+              <li><input type="checkbox" checked>Pickle</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog18">Total: ₹<span class="totalAmount">30</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 19 -->
+        <div class="recipe">
+          <p class="name">Dal Rice</p>
+          <img src="../../photos/dal-rice.png" alt="Dal Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartDalRice">Add to Cart</a>
+          <p class="price">Half ₹30 | Full ₹55</p>
+          <div id="checkOrderDalRice" title="DalRice" data-half="30" data-full="55" data-recipe-num="19"><div class="portion-choice"><label><input type="radio" name="portionDalRice" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionDalRice" value="55"> Full ₹55</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe19">
+              <li><input type="checkbox" checked>Ghee</li>
+              <li><input type="checkbox" checked>Pickle</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog19">Total: ₹<span class="totalAmount">30</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 20 -->
+        <div class="recipe">
+          <p class="name">Kadhi Chawal</p>
+          <img src="../../photos/kadhi-chawal.png" alt="Kadhi Chawal">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartKadhiChawal">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹60</p>
+          <div id="checkOrderKadhiChawal" title="KadhiChawal" data-half="35" data-full="60" data-recipe-num="20"><div class="portion-choice"><label><input type="radio" name="portionKadhiChawal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionKadhiChawal" value="60"> Full ₹60</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe20">
+              <li><input type="checkbox" checked>Rice</li>
+              <li><input type="checkbox" checked>Boondi</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog20">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 31 -->
+        <div class="recipe">
+          <p class="name">Paneer Butter Masala</p>
+          <img src="../../photos/paneer-butter-masala.png" alt="Paneer Butter Masala">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartPaneerButterMasala">Add to Cart</a>
+          <p class="price">Half ₹55 | Full ₹95</p>
+          <div id="checkOrderPaneerButterMasala" title="PaneerButterMasala" data-half="55" data-full="95" data-recipe-num="31"><div class="portion-choice"><label><input type="radio" name="portionPaneerButterMasala" value="55" checked> Half ₹55</label> <label><input type="radio" name="portionPaneerButterMasala" value="95"> Full ₹95</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe31">
+              <li><input type="checkbox" checked>Naan</li>
+              <li><input type="checkbox" checked>Onion</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog31">Total: ₹<span class="totalAmount">55</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 30 -->
+        <div class="recipe">
+          <p class="name">Butter Naan</p>
+          <img src="../../photos/butter-naan.png" alt="Butter Naan">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartButterNaan">Add to Cart</a>
+          <p class="price">Half ₹25 | Full ₹45</p>
+          <div id="checkOrderButterNaan" title="ButterNaan" data-half="25" data-full="45" data-recipe-num="30"><div class="portion-choice"><label><input type="radio" name="portionButterNaan" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionButterNaan" value="45"> Full ₹45</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe30">
+              <li><input type="checkbox" checked>Butter</li>
+              <li><input type="checkbox" checked>Garlic</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog30">Total: ₹<span class="totalAmount">25</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 32 -->
+        <div class="recipe">
+          <p class="name">Dal Makhani</p>
+          <img src="../../photos/dal-makhani.png" alt="Dal Makhani">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartDalMakhani">Add to Cart</a>
+          <p class="price">Half ₹45 | Full ₹85</p>
+          <div id="checkOrderDalMakhani" title="DalMakhani" data-half="45" data-full="85" data-recipe-num="32"><div class="portion-choice"><label><input type="radio" name="portionDalMakhani" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionDalMakhani" value="85"> Full ₹85</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe32">
+              <li><input type="checkbox" checked>Butter</li>
+              <li><input type="checkbox" checked>Cream</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog32">Total: ₹<span class="totalAmount">45</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 33 -->
+        <div class="recipe">
+          <p class="name">Veg Pulao</p>
+          <img src="../../photos/veg-pulao.png" alt="Veg Pulao">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartVegPulao">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹75</p>
+          <div id="checkOrderVegPulao" title="VegPulao" data-half="40" data-full="75" data-recipe-num="33"><div class="portion-choice"><label><input type="radio" name="portionVegPulao" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionVegPulao" value="75"> Full ₹75</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe33">
+              <li><input type="checkbox" checked>Raita</li>
+              <li><input type="checkbox" checked>Salad</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog33">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 34 -->
+        <div class="recipe">
+          <p class="name">Jeera Rice</p>
+          <img src="../../photos/jeera-rice.png" alt="Jeera Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartJeeraRice">Add to Cart</a>
+          <p class="price">Half ₹25 | Full ₹45</p>
+          <div id="checkOrderJeeraRice" title="JeeraRice" data-half="25" data-full="45" data-recipe-num="34"><div class="portion-choice"><label><input type="radio" name="portionJeeraRice" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionJeeraRice" value="45"> Full ₹45</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe34">
+              <li><input type="checkbox" checked>Dal</li>
+              <li><input type="checkbox" checked>Raita</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog34">Total: ₹<span class="totalAmount">25</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 35 -->
+        <div class="recipe">
+          <p class="name">Mix Veg</p>
+          <img src="../../photos/mix-veg.png" alt="Mix Veg">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartMixVeg">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderMixVeg" title="MixVeg" data-half="35" data-full="65" data-recipe-num="35"><div class="portion-choice"><label><input type="radio" name="portionMixVeg" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionMixVeg" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe35">
+              <li><input type="checkbox" checked>Roti</li>
+              <li><input type="checkbox" checked>Salad</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog35">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 36 -->
+        <div class="recipe">
+          <p class="name">Malai Kofta</p>
+          <img src="../../photos/malai-kofta.png" alt="Malai Kofta">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartMalaiKofta">Add to Cart</a>
+          <p class="price">Half ₹50 | Full ₹90</p>
+          <div id="checkOrderMalaiKofta" title="MalaiKofta" data-half="50" data-full="90" data-recipe-num="36"><div class="portion-choice"><label><input type="radio" name="portionMalaiKofta" value="50" checked> Half ₹50</label> <label><input type="radio" name="portionMalaiKofta" value="90"> Full ₹90</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe36">
+              <li><input type="checkbox" checked>Naan</li>
+              <li><input type="checkbox" checked>Rice</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog36">Total: ₹<span class="totalAmount">50</span></h4>
+          </div>
+        </div>
+
+</section>
+        <section class="menu-category" id="south-indian">
+          <h2 class="category-heading">South Indian</h2>
+        <!-- Recipe 13 -->
+        <div class="recipe">
+          <p class="name">Dosa</p>
+          <img src="../../photos/dosa.png" alt="Dosa">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartDosa">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderDosa" title="Dosa" data-half="35" data-full="65" data-recipe-num="13"><div class="portion-choice"><label><input type="radio" name="portionDosa" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionDosa" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe13">
+              <li><input type="checkbox" checked>Coconut Chutney</li>
+              <li><input type="checkbox" checked>Sambar</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog13">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 14 -->
+        <div class="recipe">
+          <p class="name">Idli</p>
+          <img src="../../photos/idli.png" alt="Idli">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartIdli">Add to Cart</a>
+          <p class="price">Half ₹25 | Full ₹50</p>
+          <div id="checkOrderIdli" title="Idli" data-half="25" data-full="50" data-recipe-num="14"><div class="portion-choice"><label><input type="radio" name="portionIdli" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionIdli" value="50"> Full ₹50</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe14">
+              <li><input type="checkbox" checked>Sambar</li>
+              <li><input type="checkbox" checked>Chutney</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog14">Total: ₹<span class="totalAmount">25</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 39 -->
+        <div class="recipe">
+          <p class="name">Rava Dosa</p>
+          <img src="../../photos/rava-dosa.png" alt="Rava Dosa">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartRavaDosa">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹70</p>
+          <div id="checkOrderRavaDosa" title="RavaDosa" data-half="40" data-full="70" data-recipe-num="39"><div class="portion-choice"><label><input type="radio" name="portionRavaDosa" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionRavaDosa" value="70"> Full ₹70</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe39">
+              <li><input type="checkbox" checked>Chutney</li>
+              <li><input type="checkbox" checked>Sambar</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog39">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 40 -->
+        <div class="recipe">
+          <p class="name">Pongal</p>
+          <img src="../../photos/pongal.png" alt="Pongal">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartPongal">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹60</p>
+          <div id="checkOrderPongal" title="Pongal" data-half="35" data-full="60" data-recipe-num="40"><div class="portion-choice"><label><input type="radio" name="portionPongal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionPongal" value="60"> Full ₹60</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe40">
+              <li><input type="checkbox" checked>Sambar</li>
+              <li><input type="checkbox" checked>Coconut Chutney</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog40">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 41 -->
+        <div class="recipe">
+          <p class="name">Sambar Rice</p>
+          <img src="../../photos/sambar-rice.png" alt="Sambar Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartSambarRice">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderSambarRice" title="SambarRice" data-half="35" data-full="65" data-recipe-num="41"><div class="portion-choice"><label><input type="radio" name="portionSambarRice" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionSambarRice" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe41">
+              <li><input type="checkbox" checked>Ghee</li>
+              <li><input type="checkbox" checked>Papad</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog41">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 42 -->
+        <div class="recipe">
+          <p class="name">Curd Rice</p>
+          <img src="../../photos/curd-rice.png" alt="Curd Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartCurdRice">Add to Cart</a>
+          <p class="price">Half ₹30 | Full ₹55</p>
+          <div id="checkOrderCurdRice" title="CurdRice" data-half="30" data-full="55" data-recipe-num="42"><div class="portion-choice"><label><input type="radio" name="portionCurdRice" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionCurdRice" value="55"> Full ₹55</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe42">
+              <li><input type="checkbox" checked>Pickle</li>
+              <li><input type="checkbox" checked>Pomegranate</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog42">Total: ₹<span class="totalAmount">30</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 43 -->
+        <div class="recipe">
+          <p class="name">Lemon Rice</p>
+          <img src="../../photos/lemon-rice.png" alt="Lemon Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartLemonRice">Add to Cart</a>
+          <p class="price">Half ₹30 | Full ₹55</p>
+          <div id="checkOrderLemonRice" title="LemonRice" data-half="30" data-full="55" data-recipe-num="43"><div class="portion-choice"><label><input type="radio" name="portionLemonRice" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionLemonRice" value="55"> Full ₹55</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe43">
+              <li><input type="checkbox" checked>Peanuts</li>
+              <li><input type="checkbox" checked>Curry Leaf</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog43">Total: ₹<span class="totalAmount">30</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 44 -->
+        <div class="recipe">
+          <p class="name">Tamarind Rice</p>
+          <img src="../../photos/tamarind-rice.png" alt="Tamarind Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartTamarindRice">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹60</p>
+          <div id="checkOrderTamarindRice" title="TamarindRice" data-half="35" data-full="60" data-recipe-num="44"><div class="portion-choice"><label><input type="radio" name="portionTamarindRice" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionTamarindRice" value="60"> Full ₹60</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe44">
+              <li><input type="checkbox" checked>Peanuts</li>
+              <li><input type="checkbox" checked>Curry Leaf</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog44">Total: ₹<span class="totalAmount">35</span></h4>
           </div>
         </div>
 
@@ -117,43 +496,6 @@
             <h4 class="totalDialog" id="totalDialog3">Total: ₹<span class="totalAmount">40</span></h4>
           </div>
         </div>
-
-        <!-- Recipe 4 -->
-        <div class="recipe">
-          <p class="name">Macaroni</p>
-          <img src="../../photos/Macaroni.png" alt="Macaroni">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartMacaroni">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderMacaroni" title="Macaroni" data-half="35" data-full="65" data-recipe-num="4"><div class="portion-choice"><label><input type="radio" name="portionMacaroni" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionMacaroni" value="65"> Full ₹65</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe4">
-              <li><input type="checkbox" checked>Tomato</li>
-              <li><input type="checkbox" checked>Cheese</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog4">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 5 -->
-        <div class="recipe">
-          <p class="name">Pasta</p>
-          <img src="../../photos/pngtree-bowl-of-delicious-white-sauce-pasta-png-image.png" alt="Pasta">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartPasta">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹70</p>
-          <div id="checkOrderPasta" title="Pasta" data-half="40" data-full="70" data-recipe-num="5"><div class="portion-choice"><label><input type="radio" name="portionPasta" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionPasta" value="70"> Full ₹70</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe5">
-              <li><input type="checkbox" checked>Tomato</li>
-              <li><input type="checkbox" checked>Cheese</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog5">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
         <!-- Recipe 6 -->
         <div class="recipe">
           <p class="name">Chilli Potato</p>
@@ -171,10 +513,78 @@
             <h4 class="totalDialog" id="totalDialog6">Total: ₹<span class="totalAmount">35</span></h4>
           </div>
         </div>
+        <!-- Recipe 49 -->
+        <div class="recipe">
+          <p class="name">Spring Roll</p>
+          <img src="../../photos/spring-roll.png" alt="Spring Roll">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartSpringRoll">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderSpringRoll" title="SpringRoll" data-half="35" data-full="65" data-recipe-num="49"><div class="portion-choice"><label><input type="radio" name="portionSpringRoll" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionSpringRoll" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe49">
+              <li><input type="checkbox" checked>Sauce</li>
+              <li><input type="checkbox" checked>Veggies</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog49">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 50 -->
+        <div class="recipe">
+          <p class="name">Manchurian</p>
+          <img src="../../photos/manchurian.png" alt="Manchurian">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartManchurian">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹70</p>
+          <div id="checkOrderManchurian" title="Manchurian" data-half="40" data-full="70" data-recipe-num="50"><div class="portion-choice"><label><input type="radio" name="portionManchurian" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionManchurian" value="70"> Full ₹70</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe50">
+              <li><input type="checkbox" checked>Sauce</li>
+              <li><input type="checkbox" checked>Spring Onion</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog50">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 51 -->
+        <div class="recipe">
+          <p class="name">Hakka Noodles</p>
+          <img src="../../photos/hakka-noodles.png" alt="Hakka Noodles">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartHakkaNoodles">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹75</p>
+          <div id="checkOrderHakkaNoodles" title="HakkaNoodles" data-half="40" data-full="75" data-recipe-num="51"><div class="portion-choice"><label><input type="radio" name="portionHakkaNoodles" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionHakkaNoodles" value="75"> Full ₹75</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe51">
+              <li><input type="checkbox" checked>Veggies</li>
+              <li><input type="checkbox" checked>Soy Sauce</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog51">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 52 -->
+        <div class="recipe">
+          <p class="name">Veg Fried Rice</p>
+          <img src="../../photos/veg-fried-rice.png" alt="Veg Fried Rice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartVegFriedRice">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹75</p>
+          <div id="checkOrderVegFriedRice" title="VegFriedRice" data-half="40" data-full="75" data-recipe-num="52"><div class="portion-choice"><label><input type="radio" name="portionVegFriedRice" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionVegFriedRice" value="75"> Full ₹75</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe52">
+              <li><input type="checkbox" checked>Soy Sauce</li>
+              <li><input type="checkbox" checked>Veggies</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog52">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
 
 </section>
         <section class="menu-category" id="snacks--fast-food">
-          <h2 class="category-heading">Snacks & Fast Food</h2>
+          <h2 class="category-heading">Snacks and Fast Food</h2>
         <!-- Recipe 7 -->
         <div class="recipe">
           <p class="name">French Fries</p>
@@ -192,43 +602,123 @@
             <h4 class="totalDialog" id="totalDialog7">Total: ₹<span class="totalAmount">30</span></h4>
           </div>
         </div>
-
-</section>
-        <section class="menu-category" id="north-indian">
-          <h2 class="category-heading">North Indian</h2>
-        <!-- Recipe 8 -->
+        <!-- Recipe 4 -->
         <div class="recipe">
-          <p class="name">Chhole Chawal</p>
-          <img src="../../photos/cholerice.png" alt="Chhole Chawal">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartChholeChawal">Add to Cart</a>
+          <p class="name">Macaroni</p>
+          <img src="../../photos/Macaroni.png" alt="Macaroni">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartMacaroni">Add to Cart</a>
           <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderChholeChawal" title="ChholeChawal" data-half="35" data-full="65" data-recipe-num="8"><div class="portion-choice"><label><input type="radio" name="portionChholeChawal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionChholeChawal" value="65"> Full ₹65</label></div>
+          <div id="checkOrderMacaroni" title="Macaroni" data-half="35" data-full="65" data-recipe-num="4"><div class="portion-choice"><label><input type="radio" name="portionMacaroni" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionMacaroni" value="65"> Full ₹65</label></div>
             <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe8">
-              <li><input type="checkbox" checked>Pickle</li>
-              <li><input type="checkbox" checked>Onions</li>
+            <ul class="listOfIngredients" id="recipe4">
+              <li><input type="checkbox" checked>Tomato</li>
+              <li><input type="checkbox" checked>Cheese</li>
             </ul>
             <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
             <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog8">Total: ₹<span class="totalAmount">35</span></h4>
+            <h4 class="totalDialog" id="totalDialog4">Total: ₹<span class="totalAmount">35</span></h4>
           </div>
         </div>
-
-        <!-- Recipe 9 -->
+        <!-- Recipe 5 -->
         <div class="recipe">
-          <p class="name">Rajma Chawal</p>
-          <img src="../../photos/delicious-rajma-masala-with-rice-hearty-indian-dish_84443.png" alt="Rajma Chawal">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartRajmaChawal">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderRajmaChawal" title="RajmaChawal" data-half="35" data-full="65" data-recipe-num="9"><div class="portion-choice"><label><input type="radio" name="portionRajmaChawal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionRajmaChawal" value="65"> Full ₹65</label></div>
+          <p class="name">Pasta</p>
+          <img src="../../photos/pngtree-bowl-of-delicious-white-sauce-pasta-png-image.png" alt="Pasta">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartPasta">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹70</p>
+          <div id="checkOrderPasta" title="Pasta" data-half="40" data-full="70" data-recipe-num="5"><div class="portion-choice"><label><input type="radio" name="portionPasta" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionPasta" value="70"> Full ₹70</label></div>
             <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe9">
-              <li><input type="checkbox" checked>Pickle</li>
-              <li><input type="checkbox" checked>Onions</li>
+            <ul class="listOfIngredients" id="recipe5">
+              <li><input type="checkbox" checked>Tomato</li>
+              <li><input type="checkbox" checked>Cheese</li>
             </ul>
             <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
             <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog9">Total: ₹<span class="totalAmount">35</span></h4>
+            <h4 class="totalDialog" id="totalDialog5">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 17 -->
+        <div class="recipe">
+          <p class="name">Samosa</p>
+          <img src="../../photos/samosa.png" alt="Samosa">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartSamosa">Add to Cart</a>
+          <p class="price">Half ₹25 | Full ₹45</p>
+          <div id="checkOrderSamosa" title="Samosa" data-half="25" data-full="45" data-recipe-num="17"><div class="portion-choice"><label><input type="radio" name="portionSamosa" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionSamosa" value="45"> Full ₹45</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe17">
+              <li><input type="checkbox" checked>Tamarind Chutney</li>
+              <li><input type="checkbox" checked>Green Chutney</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog17">Total: ₹<span class="totalAmount">25</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 45 -->
+        <div class="recipe">
+          <p class="name">Sandwich</p>
+          <img src="../../photos/sandwich.png" alt="Sandwich">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartSandwich">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹65</p>
+          <div id="checkOrderSandwich" title="Sandwich" data-half="35" data-full="65" data-recipe-num="45"><div class="portion-choice"><label><input type="radio" name="portionSandwich" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionSandwich" value="65"> Full ₹65</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe45">
+              <li><input type="checkbox" checked>Cheese</li>
+              <li><input type="checkbox" checked>Veggies</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog45">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 46 -->
+        <div class="recipe">
+          <p class="name">Burger</p>
+          <img src="../../photos/burger.png" alt="Burger">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartBurger">Add to Cart</a>
+          <p class="price">Half ₹45 | Full ₹85</p>
+          <div id="checkOrderBurger" title="Burger" data-half="45" data-full="85" data-recipe-num="46"><div class="portion-choice"><label><input type="radio" name="portionBurger" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionBurger" value="85"> Full ₹85</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe46">
+              <li><input type="checkbox" checked>Lettuce</li>
+              <li><input type="checkbox" checked>Sauce</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog46">Total: ₹<span class="totalAmount">45</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 47 -->
+        <div class="recipe">
+          <p class="name">Pizza Slice</p>
+          <img src="../../photos/pizza-slice.png" alt="Pizza Slice">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartPizzaSlice">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹75</p>
+          <div id="checkOrderPizzaSlice" title="PizzaSlice" data-half="40" data-full="75" data-recipe-num="47"><div class="portion-choice"><label><input type="radio" name="portionPizzaSlice" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionPizzaSlice" value="75"> Full ₹75</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe47">
+              <li><input type="checkbox" checked>Cheese</li>
+              <li><input type="checkbox" checked>Olives</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog47">Total: ₹<span class="totalAmount">40</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 48 -->
+        <div class="recipe">
+          <p class="name">Nachos</p>
+          <img src="../../photos/nachos.png" alt="Nachos">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartNachos">Add to Cart</a>
+          <p class="price">Half ₹40 | Full ₹70</p>
+          <div id="checkOrderNachos" title="Nachos" data-half="40" data-full="70" data-recipe-num="48"><div class="portion-choice"><label><input type="radio" name="portionNachos" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionNachos" value="70"> Full ₹70</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe48">
+              <li><input type="checkbox" checked>Salsa</li>
+              <li><input type="checkbox" checked>Cheese</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog48">Total: ₹<span class="totalAmount">40</span></h4>
           </div>
         </div>
 
@@ -252,7 +742,6 @@
             <h4 class="totalDialog" id="totalDialog10">Total: ₹<span class="totalAmount">35</span></h4>
           </div>
         </div>
-
         <!-- Recipe 11 -->
         <div class="recipe">
           <p class="name">Chocolate Shake</p>
@@ -270,7 +759,6 @@
             <h4 class="totalDialog" id="totalDialog11">Total: ₹<span class="totalAmount">45</span></h4>
           </div>
         </div>
-
         <!-- Recipe 12 -->
         <div class="recipe">
           <p class="name">Frooti</p>
@@ -283,593 +771,7 @@
             <h4 class="totalDialog" id="totalDialog12">Total: ₹<span class="totalAmount">25</span></h4>
           </div>
         </div>
-
-</section>
-        <section class="menu-category" id="south-indian">
-          <h2 class="category-heading">South Indian</h2>
-                <!-- Recipe 13 -->
-        <div class="recipe">
-          <p class="name">Dosa</p>
-          <img src="../../photos/dosa.png" alt="Dosa">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartDosa">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderDosa" title="Dosa" data-half="35" data-full="65" data-recipe-num="13"><div class="portion-choice"><label><input type="radio" name="portionDosa" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionDosa" value="65"> Full ₹65</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe13">
-              <li><input type="checkbox" checked>Coconut Chutney</li>
-              <li><input type="checkbox" checked>Sambar</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog13">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 14 -->
-        <div class="recipe">
-          <p class="name">Idli</p>
-          <img src="../../photos/idli.png" alt="Idli">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartIdli">Add to Cart</a>
-          <p class="price">Half ₹25 | Full ₹50</p>
-          <div id="checkOrderIdli" title="Idli" data-half="25" data-full="50" data-recipe-num="14"><div class="portion-choice"><label><input type="radio" name="portionIdli" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionIdli" value="50"> Full ₹50</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe14">
-              <li><input type="checkbox" checked>Sambar</li>
-              <li><input type="checkbox" checked>Chutney</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog14">Total: ₹<span class="totalAmount">25</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="north-indian">
-          <h2 class="category-heading">North Indian</h2>
-                <!-- Recipe 15 -->
-        <div class="recipe">
-          <p class="name">Veg Biryani</p>
-          <img src="../../photos/vegbiryani.png" alt="Veg Biryani">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartVegBiryani">Add to Cart</a>
-          <p class="price">Half ₹50 | Full ₹95</p>
-          <div id="checkOrderVegBiryani" title="VegBiryani" data-half="50" data-full="95" data-recipe-num="15"><div class="portion-choice"><label><input type="radio" name="portionVegBiryani" value="50" checked> Half ₹50</label> <label><input type="radio" name="portionVegBiryani" value="95"> Full ₹95</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe15">
-              <li><input type="checkbox" checked>Raita</li>
-              <li><input type="checkbox" checked>Salad</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog15">Total: ₹<span class="totalAmount">50</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 16 -->
-        <div class="recipe">
-          <p class="name">Paneer Tikka</p>
-          <img src="../../photos/paneertikka.png" alt="Paneer Tikka">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartPaneerTikka">Add to Cart</a>
-          <p class="price">Half ₹45 | Full ₹85</p>
-          <div id="checkOrderPaneerTikka" title="PaneerTikka" data-half="45" data-full="85" data-recipe-num="16"><div class="portion-choice"><label><input type="radio" name="portionPaneerTikka" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionPaneerTikka" value="85"> Full ₹85</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe16">
-              <li><input type="checkbox" checked>Mint Chutney</li>
-              <li><input type="checkbox" checked>Onion</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog16">Total: ₹<span class="totalAmount">45</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="snacks--fast-food">
-          <h2 class="category-heading">Snacks & Fast Food</h2>
-                <!-- Recipe 17 -->
-        <div class="recipe">
-          <p class="name">Samosa</p>
-          <img src="../../photos/samosa.png" alt="Samosa">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartSamosa">Add to Cart</a>
-          <p class="price">Half ₹25 | Full ₹45</p>
-          <div id="checkOrderSamosa" title="Samosa" data-half="25" data-full="45" data-recipe-num="17"><div class="portion-choice"><label><input type="radio" name="portionSamosa" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionSamosa" value="45"> Full ₹45</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe17">
-              <li><input type="checkbox" checked>Tamarind Chutney</li>
-              <li><input type="checkbox" checked>Green Chutney</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog17">Total: ₹<span class="totalAmount">25</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="north-indian">
-          <h2 class="category-heading">North Indian</h2>
-                <!-- Recipe 18 -->
-        <div class="recipe">
-          <p class="name">Aloo Paratha</p>
-          <img src="../../photos/alooparatha.jpeg.png" alt="Aloo Paratha">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartAlooParatha">Add to Cart</a>
-          <p class="price">Half ₹30 | Full ₹55</p>
-          <div id="checkOrderAlooParatha" title="AlooParatha" data-half="30" data-full="55" data-recipe-num="18"><div class="portion-choice"><label><input type="radio" name="portionAlooParatha" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionAlooParatha" value="55"> Full ₹55</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe18">
-              <li><input type="checkbox" checked>Curd</li>
-              <li><input type="checkbox" checked>Pickle</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog18">Total: ₹<span class="totalAmount">30</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 19 -->
-        <div class="recipe">
-          <p class="name">Dal Rice</p>
-          <img src="../../photos/dal-rice.png" alt="Dal Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartDalRice">Add to Cart</a>
-          <p class="price">Half ₹30 | Full ₹55</p>
-          <div id="checkOrderDalRice" title="DalRice" data-half="30" data-full="55" data-recipe-num="19"><div class="portion-choice"><label><input type="radio" name="portionDalRice" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionDalRice" value="55"> Full ₹55</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe19">
-              <li><input type="checkbox" checked>Ghee</li>
-              <li><input type="checkbox" checked>Pickle</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog19">Total: ₹<span class="totalAmount">30</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 20 -->
-        <div class="recipe">
-          <p class="name">Kadhi Chawal</p>
-          <img src="../../photos/kadhi-chawal.png" alt="Kadhi Chawal">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartKadhiChawal">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹60</p>
-          <div id="checkOrderKadhiChawal" title="KadhiChawal" data-half="35" data-full="60" data-recipe-num="20"><div class="portion-choice"><label><input type="radio" name="portionKadhiChawal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionKadhiChawal" value="60"> Full ₹60</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe20">
-              <li><input type="checkbox" checked>Rice</li>
-              <li><input type="checkbox" checked>Boondi</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog20">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 30 -->
-        <div class="recipe">
-          <p class="name">Butter Naan</p>
-          <img src="../../photos/butter-naan.png" alt="Butter Naan">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartButterNaan">Add to Cart</a>
-          <p class="price">Half ₹25 | Full ₹45</p>
-          <div id="checkOrderButterNaan" title="ButterNaan" data-half="25" data-full="45" data-recipe-num="30"><div class="portion-choice"><label><input type="radio" name="portionButterNaan" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionButterNaan" value="45"> Full ₹45</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe30">
-              <li><input type="checkbox" checked>Butter</li>
-              <li><input type="checkbox" checked>Garlic</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog30">Total: ₹<span class="totalAmount">25</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 31 -->
-        <div class="recipe">
-          <p class="name">Paneer Butter Masala</p>
-          <img src="../../photos/paneer-butter-masala.png" alt="Paneer Butter Masala">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartPaneerButterMasala">Add to Cart</a>
-          <p class="price">Half ₹55 | Full ₹95</p>
-          <div id="checkOrderPaneerButterMasala" title="PaneerButterMasala" data-half="55" data-full="95" data-recipe-num="31"><div class="portion-choice"><label><input type="radio" name="portionPaneerButterMasala" value="55" checked> Half ₹55</label> <label><input type="radio" name="portionPaneerButterMasala" value="95"> Full ₹95</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe31">
-              <li><input type="checkbox" checked>Naan</li>
-              <li><input type="checkbox" checked>Onion</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog31">Total: ₹<span class="totalAmount">55</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 32 -->
-        <div class="recipe">
-          <p class="name">Dal Makhani</p>
-          <img src="../../photos/dal-makhani.png" alt="Dal Makhani">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartDalMakhani">Add to Cart</a>
-          <p class="price">Half ₹45 | Full ₹85</p>
-          <div id="checkOrderDalMakhani" title="DalMakhani" data-half="45" data-full="85" data-recipe-num="32"><div class="portion-choice"><label><input type="radio" name="portionDalMakhani" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionDalMakhani" value="85"> Full ₹85</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe32">
-              <li><input type="checkbox" checked>Butter</li>
-              <li><input type="checkbox" checked>Cream</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog32">Total: ₹<span class="totalAmount">45</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 33 -->
-        <div class="recipe">
-          <p class="name">Veg Pulao</p>
-          <img src="../../photos/veg-pulao.png" alt="Veg Pulao">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartVegPulao">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹75</p>
-          <div id="checkOrderVegPulao" title="VegPulao" data-half="40" data-full="75" data-recipe-num="33"><div class="portion-choice"><label><input type="radio" name="portionVegPulao" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionVegPulao" value="75"> Full ₹75</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe33">
-              <li><input type="checkbox" checked>Raita</li>
-              <li><input type="checkbox" checked>Salad</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog33">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 34 -->
-        <div class="recipe">
-          <p class="name">Jeera Rice</p>
-          <img src="../../photos/jeera-rice.png" alt="Jeera Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartJeeraRice">Add to Cart</a>
-          <p class="price">Half ₹25 | Full ₹45</p>
-          <div id="checkOrderJeeraRice" title="JeeraRice" data-half="25" data-full="45" data-recipe-num="34"><div class="portion-choice"><label><input type="radio" name="portionJeeraRice" value="25" checked> Half ₹25</label> <label><input type="radio" name="portionJeeraRice" value="45"> Full ₹45</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe34">
-              <li><input type="checkbox" checked>Dal</li>
-              <li><input type="checkbox" checked>Raita</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog34">Total: ₹<span class="totalAmount">25</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 35 -->
-        <div class="recipe">
-          <p class="name">Mix Veg</p>
-          <img src="../../photos/mix-veg.png" alt="Mix Veg">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartMixVeg">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderMixVeg" title="MixVeg" data-half="35" data-full="65" data-recipe-num="35"><div class="portion-choice"><label><input type="radio" name="portionMixVeg" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionMixVeg" value="65"> Full ₹65</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe35">
-              <li><input type="checkbox" checked>Roti</li>
-              <li><input type="checkbox" checked>Salad</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog35">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 36 -->
-        <div class="recipe">
-          <p class="name">Malai Kofta</p>
-          <img src="../../photos/malai-kofta.png" alt="Malai Kofta">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartMalaiKofta">Add to Cart</a>
-          <p class="price">Half ₹50 | Full ₹90</p>
-          <div id="checkOrderMalaiKofta" title="MalaiKofta" data-half="50" data-full="90" data-recipe-num="36"><div class="portion-choice"><label><input type="radio" name="portionMalaiKofta" value="50" checked> Half ₹50</label> <label><input type="radio" name="portionMalaiKofta" value="90"> Full ₹90</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe36">
-              <li><input type="checkbox" checked>Naan</li>
-              <li><input type="checkbox" checked>Rice</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog36">Total: ₹<span class="totalAmount">50</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="desserts">
-          <h2 class="category-heading">Desserts</h2>
-                <!-- Recipe 37 -->
-        <div class="recipe">
-          <p class="name">Gulab Jamun</p>
-          <img src="../../photos/gulab-jamun.png" alt="Gulab Jamun">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartGulabJamun">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹60</p>
-          <div id="checkOrderGulabJamun" title="GulabJamun" data-half="35" data-full="60" data-recipe-num="37"><div class="portion-choice"><label><input type="radio" name="portionGulabJamun" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionGulabJamun" value="60"> Full ₹60</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe37">
-              <li><input type="checkbox" checked>Rabri</li>
-              <li><input type="checkbox" checked>None</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog37">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 38 -->
-        <div class="recipe">
-          <p class="name">Rasmalai</p>
-          <img src="../../photos/rasmalai.png" alt="Rasmalai">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartRasmalai">Add to Cart</a>
-          <p class="price">Half ₹45 | Full ₹75</p>
-          <div id="checkOrderRasmalai" title="Rasmalai" data-half="45" data-full="75" data-recipe-num="38"><div class="portion-choice"><label><input type="radio" name="portionRasmalai" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionRasmalai" value="75"> Full ₹75</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe38">
-              <li><input type="checkbox" checked>Cardamom</li>
-              <li><input type="checkbox" checked>Pista</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog38">Total: ₹<span class="totalAmount">45</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="south-indian">
-          <h2 class="category-heading">South Indian</h2>
-                <!-- Recipe 39 -->
-        <div class="recipe">
-          <p class="name">Rava Dosa</p>
-          <img src="../../photos/rava-dosa.png" alt="Rava Dosa">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartRavaDosa">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹70</p>
-          <div id="checkOrderRavaDosa" title="RavaDosa" data-half="40" data-full="70" data-recipe-num="39"><div class="portion-choice"><label><input type="radio" name="portionRavaDosa" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionRavaDosa" value="70"> Full ₹70</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe39">
-              <li><input type="checkbox" checked>Chutney</li>
-              <li><input type="checkbox" checked>Sambar</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog39">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 40 -->
-        <div class="recipe">
-          <p class="name">Pongal</p>
-          <img src="../../photos/pongal.png" alt="Pongal">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartPongal">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹60</p>
-          <div id="checkOrderPongal" title="Pongal" data-half="35" data-full="60" data-recipe-num="40"><div class="portion-choice"><label><input type="radio" name="portionPongal" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionPongal" value="60"> Full ₹60</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe40">
-              <li><input type="checkbox" checked>Sambar</li>
-              <li><input type="checkbox" checked>Coconut Chutney</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog40">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 41 -->
-        <div class="recipe">
-          <p class="name">Sambar Rice</p>
-          <img src="../../photos/sambar-rice.png" alt="Sambar Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartSambarRice">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderSambarRice" title="SambarRice" data-half="35" data-full="65" data-recipe-num="41"><div class="portion-choice"><label><input type="radio" name="portionSambarRice" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionSambarRice" value="65"> Full ₹65</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe41">
-              <li><input type="checkbox" checked>Ghee</li>
-              <li><input type="checkbox" checked>Papad</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog41">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 42 -->
-        <div class="recipe">
-          <p class="name">Curd Rice</p>
-          <img src="../../photos/curd-rice.png" alt="Curd Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartCurdRice">Add to Cart</a>
-          <p class="price">Half ₹30 | Full ₹55</p>
-          <div id="checkOrderCurdRice" title="CurdRice" data-half="30" data-full="55" data-recipe-num="42"><div class="portion-choice"><label><input type="radio" name="portionCurdRice" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionCurdRice" value="55"> Full ₹55</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe42">
-              <li><input type="checkbox" checked>Pickle</li>
-              <li><input type="checkbox" checked>Pomegranate</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog42">Total: ₹<span class="totalAmount">30</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 43 -->
-        <div class="recipe">
-          <p class="name">Lemon Rice</p>
-          <img src="../../photos/lemon-rice.png" alt="Lemon Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartLemonRice">Add to Cart</a>
-          <p class="price">Half ₹30 | Full ₹55</p>
-          <div id="checkOrderLemonRice" title="LemonRice" data-half="30" data-full="55" data-recipe-num="43"><div class="portion-choice"><label><input type="radio" name="portionLemonRice" value="30" checked> Half ₹30</label> <label><input type="radio" name="portionLemonRice" value="55"> Full ₹55</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe43">
-              <li><input type="checkbox" checked>Peanuts</li>
-              <li><input type="checkbox" checked>Curry Leaf</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog43">Total: ₹<span class="totalAmount">30</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 44 -->
-        <div class="recipe">
-          <p class="name">Tamarind Rice</p>
-          <img src="../../photos/tamarind-rice.png" alt="Tamarind Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartTamarindRice">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹60</p>
-          <div id="checkOrderTamarindRice" title="TamarindRice" data-half="35" data-full="60" data-recipe-num="44"><div class="portion-choice"><label><input type="radio" name="portionTamarindRice" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionTamarindRice" value="60"> Full ₹60</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe44">
-              <li><input type="checkbox" checked>Peanuts</li>
-              <li><input type="checkbox" checked>Curry Leaf</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog44">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="snacks--fast-food">
-          <h2 class="category-heading">Snacks & Fast Food</h2>
-                <!-- Recipe 45 -->
-        <div class="recipe">
-          <p class="name">Sandwich</p>
-          <img src="../../photos/sandwich.png" alt="Sandwich">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartSandwich">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderSandwich" title="Sandwich" data-half="35" data-full="65" data-recipe-num="45"><div class="portion-choice"><label><input type="radio" name="portionSandwich" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionSandwich" value="65"> Full ₹65</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe45">
-              <li><input type="checkbox" checked>Cheese</li>
-              <li><input type="checkbox" checked>Veggies</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog45">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 46 -->
-        <div class="recipe">
-          <p class="name">Burger</p>
-          <img src="../../photos/burger.png" alt="Burger">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartBurger">Add to Cart</a>
-          <p class="price">Half ₹45 | Full ₹85</p>
-          <div id="checkOrderBurger" title="Burger" data-half="45" data-full="85" data-recipe-num="46"><div class="portion-choice"><label><input type="radio" name="portionBurger" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionBurger" value="85"> Full ₹85</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe46">
-              <li><input type="checkbox" checked>Lettuce</li>
-              <li><input type="checkbox" checked>Sauce</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog46">Total: ₹<span class="totalAmount">45</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 47 -->
-        <div class="recipe">
-          <p class="name">Pizza Slice</p>
-          <img src="../../photos/pizza-slice.png" alt="Pizza Slice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartPizzaSlice">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹75</p>
-          <div id="checkOrderPizzaSlice" title="PizzaSlice" data-half="40" data-full="75" data-recipe-num="47"><div class="portion-choice"><label><input type="radio" name="portionPizzaSlice" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionPizzaSlice" value="75"> Full ₹75</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe47">
-              <li><input type="checkbox" checked>Cheese</li>
-              <li><input type="checkbox" checked>Olives</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog47">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 48 -->
-        <div class="recipe">
-          <p class="name">Nachos</p>
-          <img src="../../photos/nachos.png" alt="Nachos">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartNachos">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹70</p>
-          <div id="checkOrderNachos" title="Nachos" data-half="40" data-full="70" data-recipe-num="48"><div class="portion-choice"><label><input type="radio" name="portionNachos" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionNachos" value="70"> Full ₹70</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe48">
-              <li><input type="checkbox" checked>Salsa</li>
-              <li><input type="checkbox" checked>Cheese</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog48">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="chinese">
-          <h2 class="category-heading">Chinese</h2>
-                <!-- Recipe 49 -->
-        <div class="recipe">
-          <p class="name">Spring Roll</p>
-          <img src="../../photos/spring-roll.png" alt="Spring Roll">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartSpringRoll">Add to Cart</a>
-          <p class="price">Half ₹35 | Full ₹65</p>
-          <div id="checkOrderSpringRoll" title="SpringRoll" data-half="35" data-full="65" data-recipe-num="49"><div class="portion-choice"><label><input type="radio" name="portionSpringRoll" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionSpringRoll" value="65"> Full ₹65</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe49">
-              <li><input type="checkbox" checked>Sauce</li>
-              <li><input type="checkbox" checked>Veggies</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog49">Total: ₹<span class="totalAmount">35</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 50 -->
-        <div class="recipe">
-          <p class="name">Manchurian</p>
-          <img src="../../photos/manchurian.png" alt="Manchurian">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartManchurian">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹70</p>
-          <div id="checkOrderManchurian" title="Manchurian" data-half="40" data-full="70" data-recipe-num="50"><div class="portion-choice"><label><input type="radio" name="portionManchurian" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionManchurian" value="70"> Full ₹70</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe50">
-              <li><input type="checkbox" checked>Sauce</li>
-              <li><input type="checkbox" checked>Spring Onion</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog50">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 51 -->
-        <div class="recipe">
-          <p class="name">Hakka Noodles</p>
-          <img src="../../photos/hakka-noodles.png" alt="Hakka Noodles">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartHakkaNoodles">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹75</p>
-          <div id="checkOrderHakkaNoodles" title="HakkaNoodles" data-half="40" data-full="75" data-recipe-num="51"><div class="portion-choice"><label><input type="radio" name="portionHakkaNoodles" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionHakkaNoodles" value="75"> Full ₹75</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe51">
-              <li><input type="checkbox" checked>Veggies</li>
-              <li><input type="checkbox" checked>Soy Sauce</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog51">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-        <!-- Recipe 52 -->
-        <div class="recipe">
-          <p class="name">Veg Fried Rice</p>
-          <img src="../../photos/veg-fried-rice.png" alt="Veg Fried Rice">
-          <a class="btnStyle3 btnStyle addToCart" id="addToCartVegFriedRice">Add to Cart</a>
-          <p class="price">Half ₹40 | Full ₹75</p>
-          <div id="checkOrderVegFriedRice" title="VegFriedRice" data-half="40" data-full="75" data-recipe-num="52"><div class="portion-choice"><label><input type="radio" name="portionVegFriedRice" value="40" checked> Half ₹40</label> <label><input type="radio" name="portionVegFriedRice" value="75"> Full ₹75</label></div>
-            <h3 class="listHeading">List of Ingredients:</h3>
-            <ul class="listOfIngredients" id="recipe52">
-              <li><input type="checkbox" checked>Soy Sauce</li>
-              <li><input type="checkbox" checked>Veggies</li>
-            </ul>
-            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
-            <a class="btnStyle listOver">Done</a>
-            <h4 class="totalDialog" id="totalDialog52">Total: ₹<span class="totalAmount">40</span></h4>
-          </div>
-        </div>
-
-</section>
-        <section class="menu-category" id="beverages">
-          <h2 class="category-heading">Beverages</h2>
-                <!-- Recipe 53 -->
+        <!-- Recipe 53 -->
         <div class="recipe">
           <p class="name">Tomato Soup</p>
           <img src="../../photos/tomato-soup.png" alt="Tomato Soup">
@@ -886,7 +788,6 @@
             <h4 class="totalDialog" id="totalDialog53">Total: ₹<span class="totalAmount">35</span></h4>
           </div>
         </div>
-
         <!-- Recipe 54 -->
         <div class="recipe">
           <p class="name">Hot Coffee</p>
@@ -904,7 +805,6 @@
             <h4 class="totalDialog" id="totalDialog54">Total: ₹<span class="totalAmount">30</span></h4>
           </div>
         </div>
-
         <!-- Recipe 55 -->
         <div class="recipe">
           <p class="name">Masala Chai</p>
@@ -922,7 +822,6 @@
             <h4 class="totalDialog" id="totalDialog55">Total: ₹<span class="totalAmount">20</span></h4>
           </div>
         </div>
-
         <!-- Recipe 56 -->
         <div class="recipe">
           <p class="name">Lassi</p>
@@ -940,7 +839,6 @@
             <h4 class="totalDialog" id="totalDialog56">Total: ₹<span class="totalAmount">30</span></h4>
           </div>
         </div>
-
         <!-- Recipe 57 -->
         <div class="recipe">
           <p class="name">Jaljeera</p>
@@ -958,7 +856,6 @@
             <h4 class="totalDialog" id="totalDialog57">Total: ₹<span class="totalAmount">25</span></h4>
           </div>
         </div>
-
         <!-- Recipe 58 -->
         <div class="recipe">
           <p class="name">Fresh Lime</p>
@@ -980,7 +877,41 @@
 </section>
         <section class="menu-category" id="desserts">
           <h2 class="category-heading">Desserts</h2>
-                <!-- Recipe 59 -->
+        <!-- Recipe 37 -->
+        <div class="recipe">
+          <p class="name">Gulab Jamun</p>
+          <img src="../../photos/gulab-jamun.png" alt="Gulab Jamun">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartGulabJamun">Add to Cart</a>
+          <p class="price">Half ₹35 | Full ₹60</p>
+          <div id="checkOrderGulabJamun" title="GulabJamun" data-half="35" data-full="60" data-recipe-num="37"><div class="portion-choice"><label><input type="radio" name="portionGulabJamun" value="35" checked> Half ₹35</label> <label><input type="radio" name="portionGulabJamun" value="60"> Full ₹60</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe37">
+              <li><input type="checkbox" checked>Rabri</li>
+              <li><input type="checkbox" checked>None</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog37">Total: ₹<span class="totalAmount">35</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 38 -->
+        <div class="recipe">
+          <p class="name">Rasmalai</p>
+          <img src="../../photos/rasmalai.png" alt="Rasmalai">
+          <a class="btnStyle3 btnStyle addToCart" id="addToCartRasmalai">Add to Cart</a>
+          <p class="price">Half ₹45 | Full ₹75</p>
+          <div id="checkOrderRasmalai" title="Rasmalai" data-half="45" data-full="75" data-recipe-num="38"><div class="portion-choice"><label><input type="radio" name="portionRasmalai" value="45" checked> Half ₹45</label> <label><input type="radio" name="portionRasmalai" value="75"> Full ₹75</label></div>
+            <h3 class="listHeading">List of Ingredients:</h3>
+            <ul class="listOfIngredients" id="recipe38">
+              <li><input type="checkbox" checked>Cardamom</li>
+              <li><input type="checkbox" checked>Pista</li>
+            </ul>
+            <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+            <a class="btnStyle listOver">Done</a>
+            <h4 class="totalDialog" id="totalDialog38">Total: ₹<span class="totalAmount">45</span></h4>
+          </div>
+        </div>
+        <!-- Recipe 59 -->
         <div class="recipe">
           <p class="name">Ice Cream</p>
           <img src="../../photos/ice-cream.png" alt="Ice Cream">
@@ -997,7 +928,6 @@
             <h4 class="totalDialog" id="totalDialog59">Total: ₹<span class="totalAmount">40</span></h4>
           </div>
         </div>
-
         <!-- Recipe 60 -->
         <div class="recipe">
           <p class="name">Brownie</p>
@@ -1015,7 +945,6 @@
             <h4 class="totalDialog" id="totalDialog60">Total: ₹<span class="totalAmount">45</span></h4>
           </div>
         </div>
-
         <!-- Recipe 61 -->
         <div class="recipe">
           <p class="name">Cake Slice</p>
@@ -1033,7 +962,6 @@
             <h4 class="totalDialog" id="totalDialog61">Total: ₹<span class="totalAmount">50</span></h4>
           </div>
         </div>
-
         <!-- Recipe 62 -->
         <div class="recipe">
           <p class="name">Fruit Salad</p>
@@ -1052,7 +980,7 @@
           </div>
         </div>
 
-        </section>
+</section>
       </div>
     </div>
 
@@ -1064,8 +992,10 @@
       <p class="orderTotalLine">Total: ₹<span id="dialogOrderTotal">0</span></p>
       <div class="paymentMethod">
         <strong>Payment:</strong>
-        <label><input type="radio" name="paymentMethod" value="wallet" checked> Pay via Wallet</label>
-        <label><input type="radio" name="paymentMethod" value="counter"> Pay at Counter</label>
+        <label><input type="radio" name="paymentMethod" value="wallet"> Pay via Wallet</label>
+        <label><input type="radio" name="paymentMethod" value="upi"> UPI</label>
+        <label><input type="radio" name="paymentMethod" value="card"> Card</label>
+        <label><input type="radio" name="paymentMethod" value="cash" checked> Cash (at counter)</label>
       </div>
       <div id="buyerInfo">
         <input type="text" id="buyerName" placeholder="Enter Name">

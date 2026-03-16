@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Cafeholic</title>
+  <link rel="stylesheet" href="csscodes/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .auth-page { min-height: 100vh; padding-top: 100px; padding-bottom: 2rem; background: var(--bg-primary); }
+    .auth-box { max-width: 420px; margin: 0 auto; padding: 2rem; border-radius: 16px; background: var(--bg-secondary); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .auth-box h1 { font-family: 'Ubuntu', sans-serif; color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.75rem; text-align: center; }
+    .auth-tabs { display: flex; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent); }
+    .auth-tabs button { flex: 1; padding: 0.75rem; border: none; background: none; font-family: 'Ubuntu', sans-serif; font-size: 1rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; }
+    .auth-tabs button.active { color: var(--accent); border-bottom: 2px solid var(--accent); margin-bottom: -2px; }
+    .auth-form { display: none; }
+    .auth-form.active { display: block; }
+    .auth-form label { display: block; margin-bottom: 0.25rem; font-size: 0.9rem; color: var(--text-secondary); }
+    .auth-form input { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
+    body[data-theme="dark"] .auth-form input { border-color: #444; background: #2d2d2d; color: #e8e8e8; }
+    .auth-form button[type="submit"] { width: 100%; padding: 0.9rem; border: none; border-radius: 50px; background: var(--accent); color: #fff; font-size: 1.1rem; font-weight: 600; cursor: pointer; margin-top: 0.5rem; }
+    .auth-form button[type="submit"]:hover { background: var(--accent-dark); }
+    .auth-msg { margin-top: 1rem; padding: 0.75rem; border-radius: 8px; font-size: 0.9rem; display: none; }
+    .auth-msg.error { display: block; background: #fee; color: #c00; }
+    .auth-msg.success { display: block; background: #efe; color: #060; }
+    .wallet-note { font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <script>
+    (function(){var t=localStorage.getItem("cafeholic-theme");if(t==="dark")document.body.setAttribute("data-theme","dark");})();
+  </script>
+  <nav>
+    <div class="navibar">
+      <div class="logo"><a href="index.html">Cafeholic.</a></div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="online-restaurant-orderjquery/dist/menu.html">Menu</a></li>
+        <li><a href="index.html#footer">Contact</a></li>
+      </ul>
+      <div class="nav-right-group">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon theme-icon-dark"></i>
+          <i class="fas fa-sun theme-icon-light"></i>
+        </button>
+        <div class="media-icons">
+          <a href="https://www.linkedin.com/in/ipec-ghaziabad/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.ipec.org.in/" target="_blank"><i class="fas fa-laptop-code"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-box">
+      <h1>Student Login</h1>
+      <div class="auth-tabs">
+        <button type="button" id="tabLogin" class="active">Login</button>
+        <button type="button" id="tabRegister">Register</button>
+      </div>
+
+      <form id="formLogin" class="auth-form active">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required placeholder="your@email.com">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required placeholder="Password">
+        <button type="submit">Login</button>
+        <div id="loginMsg" class="auth-msg"></div>
+      </form>
+
+      <form id="formRegister" class="auth-form">
+        <label for="regName">Full Name</label>
+        <input type="text" id="regName" required placeholder="Your name">
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" required placeholder="your@email.com">
+        <label for="regCollegeId">College ID Number</label>
+        <input type="text" id="regCollegeId" required placeholder="College ID">
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" required placeholder="Min 6 characters" minlength="6">
+        <button type="submit">Register</button>
+        <div id="registerMsg" class="auth-msg"></div>
+        <p class="wallet-note">New students get ₹1000 in their wallet after registration.</p>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var API_BASE = 'http://localhost:3001';
+      var AUTH_KEY = 'cafeholic-auth';
+      var RETURN_KEY = 'cafeholic-return-url';
+
+      function getStoredAuth() {
+        try {
+          return JSON.parse(localStorage.getItem(AUTH_KEY) || 'null');
+        } catch (e) { return null; }
+      }
+
+      function setStoredAuth(token, user) {
+        localStorage.setItem(AUTH_KEY, JSON.stringify({ token: token, user: user }));
+      }
+
+      function showMsg(elId, text, isError) {
+        var el = document.getElementById(elId);
+        if (!el) return;
+        el.textContent = text;
+        el.className = 'auth-msg ' + (isError ? 'error' : 'success');
+      }
+
+      document.getElementById('tabLogin').onclick = function () {
+        document.getElementById('tabLogin').classList.add('active');
+        document.getElementById('tabRegister').classList.remove('active');
+        document.getElementById('formLogin').classList.add('active');
+        document.getElementById('formRegister').classList.remove('active');
+      };
+      document.getElementById('tabRegister').onclick = function () {
+        document.getElementById('tabRegister').classList.add('active');
+        document.getElementById('tabLogin').classList.remove('active');
+        document.getElementById('formRegister').classList.add('active');
+        document.getElementById('formLogin').classList.remove('active');
+      };
+
+      document.getElementById('themeToggle').onclick = function () {
+        var isDark = document.body.getAttribute('data-theme') === 'dark';
+        document.body.setAttribute('data-theme', isDark ? '' : 'dark');
+        localStorage.setItem('cafeholic-theme', isDark ? 'light' : 'dark');
+      };
+
+      document.getElementById('formLogin').onsubmit = function (e) {
+        e.preventDefault();
+        var email = document.getElementById('loginEmail').value.trim();
+        var password = document.getElementById('loginPassword').value;
+        showMsg('loginMsg', 'Signing in...', false);
+        fetch(API_BASE + '/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, password: password })
+        }).then(function (r) {
+          return r.json().then(function (data) {
+            if (!r.ok) throw new Error(data.error || 'Login failed');
+            setStoredAuth(data.token, data.user);
+            showMsg('loginMsg', 'Success! Redirecting...', false);
+            var returnUrl = localStorage.getItem(RETURN_KEY) || 'index.html';
+            localStorage.removeItem(RETURN_KEY);
+            window.location.href = returnUrl;
+          });
+        }).catch(function (err) {
+          showMsg('loginMsg', err.message || 'Login failed', true);
+        });
+      };
+
+      document.getElementById('formRegister').onsubmit = function (e) {
+        e.preventDefault();
+        var name = document.getElementById('regName').value.trim();
+        var email = document.getElementById('regEmail').value.trim();
+        var collegeId = document.getElementById('regCollegeId').value.trim();
+        var password = document.getElementById('regPassword').value;
+        showMsg('registerMsg', 'Creating account...', false);
+        fetch(API_BASE + '/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, collegeId: collegeId, password: password })
+        }).then(function (r) {
+          return r.json().then(function (data) {
+            if (!r.ok) throw new Error(data.error || 'Registration failed');
+            setStoredAuth(data.token, data.user);
+            showMsg('registerMsg', 'Account created with ₹1000 wallet! Redirecting...', false);
+            var returnUrl = localStorage.getItem(RETURN_KEY) || 'index.html';
+            localStorage.removeItem(RETURN_KEY);
+            window.location.href = returnUrl;
+          });
+        }).catch(function (err) {
+          showMsg('registerMsg', err.message || 'Registration failed', true);
+        });
+      };
+    })();
+  </script>
+</body>
+</html>

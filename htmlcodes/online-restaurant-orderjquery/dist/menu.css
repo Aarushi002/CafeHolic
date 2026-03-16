@@ -87,6 +87,23 @@ input{
 body[data-theme="dark"] .theme-toggle .theme-icon-light { display: inline-block; }
 body[data-theme="dark"] .theme-toggle .theme-icon-dark { display: none; }
 
+.nav-wallet {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--menu-nav-link);
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+}
+.nav-login {
+  color: var(--menu-nav-link);
+  font-weight: 600;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+.nav-login:hover { color: var(--menu-nav-link-hover); }
+
 /* Menu categories (cuisine-wise) */
 .menu-category {
   margin-bottom: 2rem;
