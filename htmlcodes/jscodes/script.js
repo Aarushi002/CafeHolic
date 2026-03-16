@@ -15,6 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     if (img.src && img.complete && img.naturalWidth === 0) img.src = placeholder;
   });
+
+  // Hero tagline typing effect: 10 second wait before typing starts again
+  var typingEl = document.getElementById("typing-text");
+  if (typingEl) {
+    var fullText = "Save yourself the time — order from the college cafeteria online!";
+    var typeSpeed = 70;
+    var waitAfterTyping = 10000; // 10 seconds
+    var i = 0;
+    function type() {
+      if (i < fullText.length) {
+        typingEl.textContent += fullText[i];
+        i++;
+        setTimeout(type, typeSpeed);
+      } else {
+        setTimeout(function () {
+          typingEl.textContent = "";
+          i = 0;
+          setTimeout(type, typeSpeed);
+        }, waitAfterTyping);
+      }
+    }
+    setTimeout(type, waitAfterTyping); // 10 second wait before first typing run
+  }
 });
 
 document.getElementById("themeToggle").addEventListener("click", function () {
