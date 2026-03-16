@@ -302,14 +302,14 @@ nav.sticky .menu-btn{
   color: var(--accent);
 }
 .home .img-chole{
-  flex: 0 1 38%;
+  flex: 0 1 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .home .img-chole img{
   max-width: 100%;
-  max-height: 380px;
+  max-height: 480px;
   object-fit: contain;
 }
 
@@ -343,7 +343,8 @@ nav.sticky .menu-btn{
 #neumorph-box {
   width: 100%;
   text-align: center;
-  margin-top: -320px;
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
 }
 
 .inner {
