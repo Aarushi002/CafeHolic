@@ -243,7 +243,7 @@ nav.sticky .menu-btn{
 /* home article styling */
 .home{
   height: 100vh;
-  width: 20%;
+  width: 100%;
   font-family: 'Ubuntu', sans-serif;
 }
 .home .home-content{
