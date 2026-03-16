@@ -67,6 +67,7 @@ $(document).ready(function() {
 		var auth = getStoredAuth();
 		if (auth && auth.token) {
 			$("#navLogin").hide();
+			$("#navLogout").css("display", "inline-block");
 			$("#navWallet").css("display", "inline-flex");
 			$("#navWalletBalance").text(Math.round(auth.user.walletBalance || 0));
 			$("#walletBalance").text(Math.round(auth.user.walletBalance || 0));
@@ -83,10 +84,15 @@ $(document).ready(function() {
 			});
 		} else {
 			$("#navWallet").hide();
+			$("#navLogout").hide();
 			$("#navLogin").css("display", "inline-block");
 			$("#walletBalance").text("—");
 		}
 	}
+	$("#navLogout").on("click", function () {
+		localStorage.removeItem(AUTH_KEY);
+		updateNavAndCartWallet();
+	});
 	updateNavAndCartWallet();
 
 	// Image fallback: show placeholder when menu photo is missing

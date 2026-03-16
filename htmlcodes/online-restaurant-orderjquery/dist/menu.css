@@ -103,6 +103,18 @@ body[data-theme="dark"] .theme-toggle .theme-icon-dark { display: none; }
   text-decoration: none;
 }
 .nav-login:hover { color: var(--menu-nav-link-hover); }
+.nav-logout {
+  background: none;
+  border: 1px solid var(--menu-nav-link);
+  color: var(--menu-nav-link);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.nav-logout:hover { color: var(--menu-nav-link-hover); border-color: var(--menu-nav-link-hover); }
 
 /* Menu categories (cuisine-wise) */
 .menu-category {

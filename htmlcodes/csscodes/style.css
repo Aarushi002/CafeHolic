@@ -254,6 +254,21 @@ nav .navibar .menu li{
 .nav-right-group .nav-login:hover {
   color: var(--nav-link-hover);
 }
+.nav-right-group .nav-logout {
+  background: none;
+  border: 1px solid var(--nav-link);
+  color: var(--nav-link);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.nav-right-group .nav-logout:hover {
+  color: var(--nav-link-hover);
+  border-color: var(--nav-link-hover);
+}
 nav.sticky .menu a{
   color: #ffffff;
 }

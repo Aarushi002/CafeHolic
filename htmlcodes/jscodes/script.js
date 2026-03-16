@@ -219,10 +219,12 @@ function updateNavAuth() {
   var navWallet = document.getElementById("navWallet");
   var navWalletBalance = document.getElementById("navWalletBalance");
   var navLogin = document.getElementById("navLogin");
+  var navLogout = document.getElementById("navLogout");
   if (!navWallet && !navLogin) return;
   var auth = getStoredAuth();
   if (auth && auth.token && auth.user) {
     if (navLogin) navLogin.style.display = "none";
+    if (navLogout) navLogout.style.display = "inline-block";
     if (navWallet) {
       navWallet.style.display = "inline-flex";
       navWallet.style.alignItems = "center";
@@ -242,7 +244,17 @@ function updateNavAuth() {
     xhr.send();
   } else {
     if (navWallet) navWallet.style.display = "none";
+    if (navLogout) navLogout.style.display = "none";
     if (navLogin) navLogin.style.display = "inline-block";
   }
 }
-document.addEventListener("DOMContentLoaded", updateNavAuth);
+document.addEventListener("DOMContentLoaded", function () {
+  updateNavAuth();
+  var navLogout = document.getElementById("navLogout");
+  if (navLogout) {
+    navLogout.addEventListener("click", function () {
+      localStorage.removeItem(AUTH_KEY);
+      updateNavAuth();
+    });
+  }
+});
